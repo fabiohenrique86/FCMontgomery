@@ -1,0 +1,574 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+@section scripts
+{
+    <script type="text/javascript">
+
+        function modalTeam(team) {
+
+            var name = "";
+            var occupation = "";
+            var about = "";
+            var favoriteSoccerTeam = "";
+            var food = "";
+            var hobby = "";
+
+            if (team == 1) {
+                name = "Bruno Resende";
+                occupation = "Director of coaching – Soccer & Futsal";
+                about = "Coach Bruno is former college & professional Soccer athlete. He has a master’s in Physical Education and coaching licenses for Futsal & Soccer. He is from Brazil and his experience includes coaching in the college, high school & club level in Montgomery for the past 12 years. Bruno oversees all aspects of both Indoor Local Futsal and Outdoor Travel Soccer programs. He also coaches U10 & U12 outdoors and all Futsal age groups.<br/>Bruno has bachelor’s degrees in Sports Management & Sports Leadership together with his master’s degree. He attended UFMG, Auburn University Montgomery and Faulkner University. He also has certifications in Refereeing, Strength and Conditioning, Sports Psychology and CPR. He is a certified K-12 teacher with multiple coaching certificates & licenses from UFMG, ENAF & USSF.<br />Bruno is fluent in English, Portuguese & Spanish and has worked with many international & domestic athletes on recruiting, camps & player development. Bruno has a passion to help athletes reach their next level technically & tactically through the most advanced youth development methodology worldwide: Brazilian Futsal. The holistic player development off-the-field is also within Bruno’s coaching style.<br />Coach Bruno’s wife Brooke is also known by the FCM kids as coach Peaches and the Resende’s kids are Susana Joy (SJ) and Michael Bosco (Bosco)!";
+                favoriteSoccerTeam = "Cruzeiro - Brazil";
+                food = "Churrasco - Brazilian steak meal";
+                hobby = "Hang out outside!";
+            }
+            else if (team == 2) {
+                name = "Kyle Beard";
+                occupation = "Assistant director of coaching - Outdoor Soccer";
+                about = "Coach Kyle is entering his fifth season as head coach of the Faulkner University men’s soccer program. Beard assists coach Bruno on our Outdoor Soccer department oversight and coaches our FCM U19 outdoor team together with coach Gabi.<br />Kyle Beard is entering his fifth season as head coach of the men’s soccer program.<br />Beard led the Eagles to an overall record of 10-6 in 2016, the program’s second consecutive winning season and most wins in program history.<br />Beard started his coaching career in 1998 at the club level in Texas.  After coaching club, high school, and semiprofessional Beard  moved his family to Rwanda to work as a vocational missionary and as a coach with the Rwandan Football Federation, FERWAFA in 2006.  He spent four years as the head coach of the women’s national team, as well as working as the director for Futsal and as an adviser for the men’s U-17 and U-20 national teams.<br />Beard started his college coaching career when he returned to the United States as the founding head coach of the men’s soccer program at Lubbock Christian University in 2009.  He led LCU to an overall record of 31-16-8 in three seasons and took the Chaps to the Sooner Athletic Conference tournament in 2011 and again in 2012, when they fell in the championship game.  His LCU players earned numerous individual honors, including NAIA All-American, SAC Player of Year, SAC Offensive Player of the Year, SAC Newcomer of the Year, and ten SAC All-Conference awards.<br />A native of Tyler, Texas, Beard earned a bachelor’s degree Lubbock Christian University in 2000. He also holds licenses and diplomas from the USSF, NSCAA(USC), ICA, and FA.<br />Beard married his wife Luz in 1996, and they have two children – Koen and Heaven!";
+                favoriteSoccerTeam = "Houston Dynamo, from the “country” of Texas";
+                food = "Seafood";
+                hobby = "Go on dates with my wife!";
+            }
+            else if (team == 3) {
+                name = "Gabi Queiroz";
+                occupation = "Assistant director of coaching - Indoor Futsal";
+                about = "Coach Gabi is entering his second season on the Faulkner University men’s soccer coaching staff and his first as assistant coach. He assists coach Bruno on the management of our Indoor Futsal program and works on our marketing & business development department. Gabi coaches our FCM outdoor U16 team and assists coach Kyle Beard with our U19 outdoor age group.<br />Queiroz started his coaching career as a student assistant coach at Faulkner in the spring of 2015.  He was hired as the assistant men’s soccer coach at Alabama Christian Academy in January 2016, and returned to Faulkner in the summer of 2016 as the top assistant coach on the men’s soccer staff.<br />A native of Salvador, Brazil, he grew up playing a lot of Futsal! Queiroz was a two-year letterman as a midfielder on the Faulkner University men’s soccer team after two years playing in junior college.  He earned a bachelor’s degree in business administration from Faulkner University in 2016.<br />Queiroz is recently married to Brittany Gregor, a Faulkner women’s soccer alum!";
+                favoriteSoccerTeam = "Vitoria - Brazil";
+                food = "Acaraje, Brazilian seafood";
+                hobby = "Play Footvolley!";
+            }
+            else if (team == 4) {
+                name = "Diego da Silva";
+                occupation = "Multi age groups – Boys & Girls";
+                about = "Coach Diego is entering his first season on the Faulkner University men’s soccer coaching staff as a student assistant goalkeeper coach. Prior to becoming a member of the Faulkner coaching staff, Da Silva was nominated for coach of the year as the ACA – Alabama Christian Academy men’s high school soccer program head coach. He led the Eagles to their best season ever qualifying to State for the first time on school history with a record of 22-1. Diego coaches our FCM U14 outdoor team and assists coach Bruno & Gabi with our U12 & U16 outdoor. You may see coach Diego on the Futsal courts too!<br />He is native of Bastos, São Paulo Brazil. At age 13 he played for his first club team in Brazil (Marília Atlético Clube). At 15 he won the State Championship in São Paulo. He has played for Olé Brasil, which is a club known for having players go out and play in other countries.<br />In 2010, he came to America and became High School National Champions with Montverde Academy, FL as an exchange student athlete. He moved to Montgomery in 2013 to attend Faulkner. He was the soccer team captain for two years and won several awards such as MVP of 2015, First Team All-Conference, and multiple Defensive Player of the Week Awards. Diego will be graduating from Faulkner in December, 2017. He pursues a degree in Business Administration.<br />Diego is married to Shelby Teeter da Silva whom he met in high school and now they have been married for three years.";
+                favoriteSoccerTeam = "Corinthians - Brazil";
+                food = "Yakisoba, “not from Brazil”";
+                hobby = "Play the video game Rock Band!";
+            }
+            else if (team == 5) {
+                name = "Travis Jordan";
+                occupation = "Assistant of coaching - U8, U9 & U10 Outdoor Soccer";
+                about = "Coach Travis started playing soccer at the age of 6.  He later played club soccer and was selected to be a part of the Alabama Olympic Development Program (ODP).  His time in the ODP included a trip to Brazil where “he defeated a younger Bruno one on one (joke).”  As much as he enjoyed playing soccer growing up, his passion for the sport has grown to a new level with the involvement of his two oldest children. Travis coaches our U8/U9 outdoor age group and assists coach Bruno with our U10 outdoor.<br />Jordan has spent the last five or so years coaching over 25 various soccer teams in the area.  These teams range in age from 4 to 12.  Other than spending time with his children, what motivates him the most as a coach is to help young people develop as players and, more importantly, as future young adults.<br />Coach Travis was born and raised in Montgomery and currently lives in Wetumpka with his wife and three children.  He earned a Bachelor’s degree in Finance from Auburn University Montgomery.  He has served in the banking industry for over 20 years and currently works for Alabama Ag Credit as a Relationship Manager.  He and his wife, Christle, have been married for 13 years.  Chloe (10), Cole (6) and Truett (9 months) all enjoy playing and watching soccer.  They love spending time together outdoors as a family and serving Christ and others in the community.";
+                favoriteSoccerTeam = "FC Barcelona - Spain";
+                food = "Stockyard Hamburger";
+                hobby = "Spending time with family!";
+            }
+            else if (team == 6) {
+                name = "Leslie Pierce";
+                occupation = "Assistant of coaching - U8 & U14 Outdoors - Indoor Futsal";
+                about = "Coach Leslie is entering her fourth season on the Faulkner University women’s soccer coaching staff and her second as Head coach. Leslie coaches our FCM girls and assists coach Travis & Diego with our U8 & U14 outdoors. She also spends a lot of time coaching Futsal!<br />Pierce started her career in 2009 coaching the U-16 and U-14 girls teams for C.C. United in Austin, Texas following a season playing professional soccer for Haringey Borough F.C. in London, England.  In 2012 she came to Faulkner as the assistant women’s soccer coach.  During that stint she also worked with the junior varsity women’s team at Prattville High School and the U-14 and U-11 girls teams for the Capital City Streaks.  In 2014 she was hired as the head women’s soccer coach at Brentwood Christian School in Austin, Texas, but only stayed for one season before returning to Faulkner as head women’s soccer coach in the summer of 2015.<br />A native of Austin, Texas, Pierce was a four-year letterman on the Harding University soccer team.  She earned a bachelor’s degree in kinesiology from Harding University in 2008 and a master’s degree in athletic administration from Oklahoma University in 2011!";
+                favoriteSoccerTeam = "Chelsea - England";
+                food = "Tex-Mex";
+                hobby = "Outdoor activities with my dogs!";
+            }
+
+            $("#modalTeamName").text(name);
+            $("#modalTeamOccupation").text(occupation);
+            $("#modalTeamAbout").html(about);
+            $("#modalTeamFavoriteSoccerTeam").text(favoriteSoccerTeam);
+            $("#modalTeamFood").text(food);
+            $("#modalTeamHobby").text(hobby);
+
+            $("#modalTeam").modal('show');
+        }
+
+        $(document).ready(function () {
+
+
+        });
+    </script>
+}
+<!-- About -->
+<section id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading text-uppercase">About</h2>
+                <h3 class="section-subheading text-muted">A little bit about us and our journey</h3>
+                <p class="text-muted">We are an Outdoor Travel Soccer & Indoor Local Futsal program that focuses on technical skill development through the Brazilian Futsal and American Soccer methodology of training. Our goal is to take players of any age & level to their next personal level of performance. We do that in a positive & fun holistic environment through quality professional training and challenging teamwork competitions year round:</p>
+                <ul style="list-style: none">
+                    <li>Club Seasons: <span class="text-muted">Spring & Fall Outdoor Soccer & Indoor Futsal</span></li>
+                    <li>Soccer Camps: <span class="text-muted">Spring Break, Summer, Thanksgiving & Christmas</span></li>
+                    <li>3v3 Tourneys: <span class="text-muted">Winter</span></li>
+                    <li>Lessons: <span class="text-muted">Private & Group</span></li>
+                    <li>Soccer Parties: <span class="text-muted">Birthday & Team</span></li>
+                    <li>Soccer Tours: <span class="text-muted">Brazil & more</span></li>
+                    <li>Home School: <span class="text-muted">All ages & levels</span></li>
+                </ul>
+                <p class="text-muted">Ask us about Military, Family discounts & Scholarship Application!</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="timeline">
+                    <li>
+                        <div class="timeline-image">
+                            <img class="rounded-circle img-fluid" src="img/about/1.jpg" alt="">
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>2009-2011</h4>
+                                <h4 class="subheading">Our Humble Beginnings</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image">
+                            <img class="rounded-circle img-fluid" src="img/about/2.jpg" alt="">
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>March 2011</h4>
+                                <h4 class="subheading">An Agency is Born</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image">
+                            <img class="rounded-circle img-fluid" src="img/about/3.jpg" alt="">
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>December 2012</h4>
+                                <h4 class="subheading">Transition to Full Service</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image">
+                            <img class="rounded-circle img-fluid" src="img/about/4.jpg" alt="">
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>July 2014</h4>
+                                <h4 class="subheading">Phase Two Expansion</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image">
+                            <h4>
+                                Be Part
+                                <br>Of Our
+                                <br>Story!
+                            </h4>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Services -->
+<section id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading text-uppercase">Services</h2>
+                <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                </span>
+                <h4 class="service-heading">E-Commerce</h4>
+                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            </div>
+            <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+                </span>
+                <h4 class="service-heading">Responsive Design</h4>
+                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            </div>
+            <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                </span>
+                <h4 class="service-heading">Web Security</h4>
+                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Grid -->
+<section class="bg-light" id="portfolio">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading text-uppercase">Portfolio</h2>
+                <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fa fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img class="img-fluid" src="img/portfolio/01-thumbnail.jpg" alt="">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>Threads</h4>
+                    <p class="text-muted">Illustration</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fa fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img class="img-fluid" src="img/portfolio/02-thumbnail.jpg" alt="">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>Explore</h4>
+                    <p class="text-muted">Graphic Design</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fa fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img class="img-fluid" src="img/portfolio/03-thumbnail.jpg" alt="">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>Finish</h4>
+                    <p class="text-muted">Identity</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fa fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img class="img-fluid" src="img/portfolio/04-thumbnail.jpg" alt="">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>Lines</h4>
+                    <p class="text-muted">Branding</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fa fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img class="img-fluid" src="img/portfolio/05-thumbnail.jpg" alt="">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>Southwest</h4>
+                    <p class="text-muted">Website Design</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fa fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img class="img-fluid" src="img/portfolio/06-thumbnail.jpg" alt="">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>Window</h4>
+                    <p class="text-muted">Photography</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Team -->
+<section class="bg-light" id="team" style="background-image: url(../img/team-bg.jpg); background-repeat: no-repeat; color: #fff; padding: 125px">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
+                <h3 class="section-subheading">We are here to help you with all the support you need</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="team-member">
+                    <img class="mx-auto rounded-circle" src="~/img/team/bruno-resende-181x300.jpg" alt="" onclick="modalTeam(1)" style="cursor: pointer">
+                    <h4>Bruno Resende</h4>
+                    <p>Director of coaching – Soccer & Futsal</p>
+                    <ul class="list-inline social-buttons">
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="team-member">
+                    <img class="mx-auto rounded-circle" src="~/img/team/kyle-beard-195x300.jpg" alt="" onclick="modalTeam(2)" style="cursor: pointer">
+                    <h4>Kyle Beard</h4>
+                    <p>Assistant director of coaching - Outdoor Soccer</p>
+                    <ul class="list-inline social-buttons">
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="team-member">
+                    <img class="mx-auto rounded-circle" src="~/img/team/gabi-queiroz-201x300.jpg" alt="" onclick="modalTeam(3)" style="cursor: pointer">
+                    <h4>Gabi Queiroz</h4>
+                    <p>Assistant director of coaching - Indoor Futsal</p>
+                    <ul class="list-inline social-buttons">
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="team-member">
+                    <img class="mx-auto rounded-circle" src="~/img/team/diego-da-silva-184x300.jpg" alt="" onclick="modalTeam(4)" style="cursor: pointer">
+                    <h4>Diego da Silva</h4>
+                    <p>Multi age groups – Boys & Girls</p>
+                    <ul class="list-inline social-buttons">
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="team-member">
+                    <img class="mx-auto rounded-circle" src="~/img/team/travis-jordan-185x300.jpg" alt="" onclick="modalTeam(5)" style="cursor: pointer">
+                    <h4>Travis Jordan</h4>
+                    <p>Assistant of coaching - U8, U9 & U10 Outdoor Soccer</p>
+                    <ul class="list-inline social-buttons">
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="team-member">
+                    <img class="mx-auto rounded-circle" src="~/img/team/leslie-pierce-237x300.jpg" alt="" onclick="modalTeam(6)" style="cursor: pointer">
+                    <h4>Leslie Pierce</h4>
+                    <p>Assistant of coaching - U8 & U14 Outdoors - Indoor Futsal</p>
+                    <ul class="list-inline social-buttons">
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Clients -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <a href="#">
+                    <img class="img-fluid d-block mx-auto" src="img/logos/envato.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <a href="#">
+                    <img class="img-fluid d-block mx-auto" src="img/logos/designmodo.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <a href="#">
+                    <img class="img-fluid d-block mx-auto" src="img/logos/themeforest.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <a href="#">
+                    <img class="img-fluid d-block mx-auto" src="img/logos/creative-market.jpg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Store -->
+<section class="bg-light" id="store">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading text-uppercase">Store</h2>
+                <h3 class="section-subheading text-muted">Do you want to join us? Check out all your options</h3>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <span class="fa-futbol-o fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-futbol-o fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <p class="text-muted">Spring or Fall Indoor Local Futsal Soccer Season (single payment): $250.00</p>
+                </div>
+                <div class="col-sm-4">
+                    <span class="fa-futbol-o fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-futbol-o fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <p class="text-muted">Spring or Fall Indoor Local Futsal Soccer Season (monthly payment): $95.00</p>
+                </div>
+                <div class="col-sm-4">
+                    <span class="fa-futbol-o fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-futbol-o fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <p class="text-muted">Private 1 on 1 Lesson: Half Hour: $25; Full Hour: $45</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Contact -->
+<section id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading text-uppercase">Contact Us</h2>
+                <h3 class="section-subheading text-muted">Do you have any questions? Send us and we will get back to you soon</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <form id="contactForm" name="sentMessage" novalidate>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input class="form-control" id="name" type="text" placeholder="Your Name *" required data-validation-required-message="Please enter your name.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" id="email" type="email" placeholder="Your Email *" required data-validation-required-message="Please enter your email address.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" required data-validation-required-message="Please enter your phone number.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <textarea class="form-control" id="message" placeholder="Your Message *" required data-validation-required-message="Please enter a message."></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="col-lg-12 text-center">
+                            <div id="success"></div>
+                            <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Send Message</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+@Html.Partial("_ModalTeam")

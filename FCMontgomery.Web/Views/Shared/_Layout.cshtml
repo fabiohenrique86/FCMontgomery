@@ -1,0 +1,267 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    <style type="text/css">
+        body {
+            color: #0F2A56;
+        }
+    </style>
+</head>
+<body id="page-top">
+    <!-- Navigation -->
+    @*<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="border-bottom: 3px solid #0F2A56">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top"><span style="color: #0F2A56">FC</span> Montgomery</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fa fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#team">Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#store">store</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>*@
+    <!-- Header -->
+    @*<header class="masthead">
+            <div class="container">
+                <div class="intro-text">
+                    <div class="intro-lead-in"></div>
+                    <div class="intro-heading text-uppercase">Welcome To Our Academy!</div>
+                </div>
+            </div>
+        </header>*@
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark fixed-top" style="border-bottom: 3px solid #0F2A56; background-color: #72142E">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="~/img/logo.png" height="60px" /></a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#team">Teams</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#event">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#tryout">Try Out</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#otherservice">Other Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#store">Store</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <!-- Slide One - Set the background image for this slide in the line below -->
+                <div class="carousel-item active" style="background-image: url('../../img/header-bg.jpg')">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>First Slide</h3>
+                        <p>This is a description for the first slide.</p>
+                    </div>
+                </div>
+                <!-- Slide Two - Set the background image for this slide in the line below -->
+                <div class="carousel-item" style="background-image: url('http://trivela.uol.com.br/wp-content/uploads/2015/09/Atletico-de-Madrid-x-Barcelona.jpg')">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>Second Slide</h3>
+                        <p>This is a description for the second slide.</p>
+                    </div>
+                </div>
+                <!-- Slide Three - Set the background image for this slide in the line below -->
+                <div class="carousel-item" style="background-image: url('http://static1.afkarnews.ir/thumbnail/BT5ANyZqAMRr/TpJ5E4VJpcpHDw14UVeNse-wE35vlbP5sAwZ1TzyuGnqDl4MMtRajs09A8sEzO82/%D9%88%DB%8C%D9%86+%D8%B1%D9%88%D9%86%DB%8C.jpg')">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>Third Slide</h3>
+                        <p>This is a description for the third slide.</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </header>
+    @RenderBody()
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="copyright">Copyright &copy; @DateTime.Now.Year</span>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+                        <li class="list-inline-item">
+                            <a href="#">Privacy Policy</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">Terms of Use</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="formRegistration" style="position: fixed; right: 5pt; z-index: 100; bottom: 35pt; background-color: #0F2A56; color: whitesmoke; border-radius: 10px; padding: 10px;">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        Fill in the form below and be part of our team!
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <input class="form-control" id="name" type="text" placeholder="Name">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <input class="form-control" id="email" type="text" placeholder="E-mail">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <select class="form-control" id="category">
+                            <option value="">Category</option>
+                            <option value="1">U8</option>
+                            <option value="1">U89</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <input class="form-control" id="telephone" type="text" placeholder="Telephone">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <a href="@Url.Action("Index","About")">Link para nada</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <button type="button" class="btn btn-info">Complete Registration</button>
+                        <button type="button" class="btn btn-warning">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="registration" style="position: fixed; right: 5pt; z-index: 100; bottom: 5pt">
+            <button type="button" class="btn btn-info">Register Now</button>
+        </div>
+
+        @*<div id="heberbot" class="card cardBig wow bounceInUp animated filtroCard hide" style="visibility: visible; border:0px;">
+                <div id="filtro_00" class="filtros wow fadeIn animated">
+                    <div class="headerDepoimento text-center bg-azul cabecalhoFiltro">
+                        <a onclick="fechar()" style="cursor:pointer;"><i class="material-icons" style="color:#fff;float:right;margin:-20px -8px;background:#05528d;border-radius:40px;padding:1px;">clear</i></a>
+                        <div style="text-align: center;">
+                            <img src="/disponibilidade/static/img/heber.260e457.jpg" width="50px" height="50px" class="img-responsive imgSombra fotoFiltro" style="display:inline-table;margin-right:15px;" alt="Fabio">
+                            <span class="nome">Olá, meu nome é Heber.</span>
+                        </div>
+                    </div>
+                    <div class="depoimento" style="padding-bottom: 20px;text-align:center;">
+                        <span class="empresa">
+                            Sou o contador responsável na Contabilizei e estou aqui para cuidar da sua contabilidade e te deixar livre para focar no que importa.
+                        </span>
+                        <br>
+                        <br>
+                        <a class="btn oi btn btn--merge" href="/disponibilidade" onclick="ga('create', 'UA-43025829-1', 'auto');ga('send', 'event', 'CTA', 'HOME','INTERCOM');">
+                            <span class="btn__text" style="color:#fff;width:80%;">
+                                Verificar disponibilidade<br>
+                            </span>
+                        </a>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="filtroContainer">
+                <div class="intercom-launcher teste" id="filtroAntesIntercom">
+                    <div class="intercom-launcher-open-icon"></div>
+                    <div class="intercom-launcher-close-icon"></div>
+                </div>
+            </div>*@
+    </footer>
+    @Scripts.Render("~/bundles/scripts")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
