@@ -169,7 +169,7 @@
             </div>
         </div>
 
-        <div id="formRegistration" style="position: fixed; right: 5pt; z-index: 100; bottom: 35pt; background-color: #0F2A56; color: whitesmoke; border-radius: 10px; padding: 10px;">
+        <div id="divRegisterNow" style="position: fixed; right: 5pt; z-index: 100; bottom: 35pt; background-color: #0F2A56; color: whitesmoke; border-radius: 10px; padding: 10px; display: none">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="form-group">
@@ -196,8 +196,8 @@
                     <div class="form-group">
                         <select class="form-control" id="category">
                             <option value="">Category</option>
-                            <option value="1">U8</option>
-                            <option value="1">U89</option>
+                            <option value="U8">U8</option>
+                            <option value="U9">U9</option>
                         </select>
                     </div>
                 </div>
@@ -212,24 +212,36 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="form-group">
-                        <a href="@Url.Action("Index","About")">Link para nada</a>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="form-group">
                         <button type="button" class="btn btn-info">Complete Registration</button>
                         <button type="button" class="btn btn-warning">Close</button>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="registration" style="position: fixed; right: 5pt; z-index: 100; bottom: 5pt">
+        <div id="btnRegisterNow" style="position: fixed; right: 5pt; z-index: 100; bottom: 5pt">
             <button type="button" class="btn btn-info">Register Now</button>
         </div>
     </footer>
     @Scripts.Render("~/bundles/scripts")
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+                
+            $("#btnRegisterNow").click(function ()
+            {
+                if ($("#divRegisterNow").is(':visible'))
+                {
+                    $("#divRegisterNow").hide();
+                }
+                else
+                {
+                    $("#divRegisterNow").show();
+                }                
+            });
+
+        });
+
+    </script>
     @RenderSection("scripts", required: false)
 </body>
 </html>
