@@ -6,8 +6,9 @@ using System.Web.Mvc;
 
 namespace FCMontgomery.Web.Controllers
 {
-    public class AboutController : Controller
+    public class IndoorSoccerController : Controller
     {
+        // GET: IndoorSoccer
         public ActionResult Index()
         {
             return View();

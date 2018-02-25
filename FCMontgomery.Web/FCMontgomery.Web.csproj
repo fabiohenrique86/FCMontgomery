@@ -120,8 +120,8 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IndoorSoccerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -140,14 +140,20 @@
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="img\bola.JPG" />
     <Content Include="img\bruno-time.JPG" />
+    <Content Include="img\chuteira.jpg" />
     <Content Include="img\drible.jpg" />
+    <Content Include="img\faulkner-logo.jpg" />
     <Content Include="img\foto-indoor.jpg" />
+    <Content Include="img\foto.JPG" />
+    <Content Include="img\goal-outdoor.jpg" />
     <Content Include="img\header-bg.jpg" />
     <Content Include="img\logo.png" />
     <Content Include="img\renan-criancas.JPG" />
     <Content Include="img\team-bg.jpg" />
     <Content Include="img\team\bruno-resende-181x300.jpg" />
+    <Content Include="img\team\bruno2.jpg" />
     <Content Include="img\team\diego-da-silva-184x300.jpg" />
     <Content Include="img\team\gabi-queiroz-201x300.jpg" />
     <Content Include="img\team\kyle-beard-195x300.jpg" />
@@ -155,6 +161,7 @@
     <Content Include="img\team\travis-jordan-185x300.jpg" />
     <Content Include="img\time-completo.jpg" />
     <Content Include="img\time.JPG" />
+    <Content Include="img\under-armour.png" />
     <Content Include="Scripts\agency.min.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\contactme.js" />
@@ -195,7 +202,7 @@
     <Content Include="Views\Shared\_ModalTeam.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\About\Index.cshtml" />
+    <Content Include="Views\IndoorSoccer\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
