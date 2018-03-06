@@ -11,13 +11,59 @@
         body {
             color: #0F2A56;
         }
-    </style>
+        .error, .input-validation-error {
+            border-color: #ED5565;
+        }
+
+        .navbar-inverse {
+            background-color: #0f3456;
+            border: none;
+        }
+
+        .navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-brand {
+            color: #fff;
+        }
+
+        .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+            border-color: red;
+        }
+
+        .navbar-brand {
+            padding: 0px 15px;
+            height: auto;
+        }
+
+        .carousel-control .fa-angle-left, .carousel-control .fa-angle-right, .carousel-control .icon-next, .carousel-control .icon-prev {
+            font-size: 40px;
+            margin-top: -35px;
+        }
+
+        .carousel-indicators li {
+            border: 1px solid #bbb;
+        }
+
+        .carousel-indicators .active {
+            background-color: #bbb;
+        }
+
+        .navbar-inverse .navbar-nav > li > a:hover {
+            color: #fff;
+        }
+
+        .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+            display: block;
+            height: 100%;
+            line-height: 1;
+            margin: 0 auto;
+            max-width: 100%;
+            padding: 1%;
+        }    </style>
 </head>
 <body id="page-top">
     <!-- Navigation -->
     @*<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="border-bottom: 3px solid #0F2A56">
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top"><span style="color: #0F2A56">FC</span> Montgomery</a>
+                <a class="navbar-brand js-scroll-trigger" href="#"><span style="color: #0F2A56">FC</span> Montgomery</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fa fa-bars"></i>
@@ -56,31 +102,31 @@
             </div>
         </header>*@
 
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark fixed-top" style="border-bottom: 3px solid #0F2A56; background-color: #72142E">
+    <nav id="mainNav" class="navbar fixed-top navbar-expand-lg navbar-dark fixed-top" style="border-bottom: 3px solid #0F2A56; background-color: #72142E">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="home#page-top"><img src="~/img/logo.png" style="height: 60px" /> FC Montgomery</a>
+            <a class="navbar-brand js-scroll-trigger" style="color: #fff" href="~/home#page-top"><img src="~/img/logo.png" style="height: 60px;" /> FC Montgomery</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="home#about">About us</a>
+                        <a class="nav-link js-scroll-trigger" href="~/home#about">About us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="home#services">Our Services</a>
+                        <a class="nav-link js-scroll-trigger" href="~/home#services">Our Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="home#team">Teams</a>
+                        <a class="nav-link js-scroll-trigger" href="~/home#team">Teams</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="home#store">Store</a>
+                        <a class="nav-link js-scroll-trigger" href="~/home#store">Store</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="home#tryout">Try Outs</a>
+                        <a class="nav-link js-scroll-trigger" href="~/home#tryout">Try Outs</a>
                     </li> 
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="home#contact">Contact</a>
+                        <a class="nav-link js-scroll-trigger" href="~/home#contact">Contact</a>
                     </li>           
                 </ul>
             </div>
@@ -89,20 +135,28 @@
     
     @RenderBody()
     <!-- Footer -->
-    <footer style="border-top: 2px solid #ccc">
-        <div class="container">
+    <footer style="background-color: #0F2A56;">
+        <div class="container bg-light" style="border-top: 2px solid #ccc">
+            <div class="row text-left">
+                <div class="col-xs-12 col-lg-3">
+                    <h5><em><p>Sponsored by</p></em></h5>
+                </div>
+                <div class="col-xs-12 col-lg-6">
+                    <h5><em><p>Partners</p></em></h5>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-md-3">
-                    <img src="~/img/faulkner-logo.jpg" style="height:100px" class="img img-responsive" />
+                    <img src="~/img/under-armour.png" style="height:60px" class="img img-responsive" />
                 </div>
                 <div class="col-md-3">
-                    <img src="~/img/under-armour.png" style="height:100px" class="img img-responsive" />
+                    <img src="~/img/faulkner-img.png" style="height:60px" class="img img-responsive" />
                 </div>
                 <div class="col-md-3">
-                    <img src="~/img/faulkner-logo.jpg" style="height:100px" class="img img-responsive" />
+                    <img src="~/img/Ems-logo.png" style="height:60px" class="img img-responsive" />
                 </div>
                 <div class="col-md-3">
-                    <img src="~/img/faulkner-logo.jpg" style="height:100px" class="img img-responsive" />
+                    <img src="~/img/Eastwood-logo.jpg" style="height:60px" class="img img-responsive" />
                 </div>
             </div>
             <div class="row">
@@ -139,8 +193,13 @@
                 <div class="form-group">
                     <select class="form-control" id="category">
                         <option value="">Category</option>
-                        <option value="U8">U8</option>
-                        <option value="U9">U9</option>
+                        <option value="U6">U6</option>
+                        <option value="U8-9">U8-9</option>
+                        <option value="U10">U10</option>
+                        <option value="U11-12">U11-12</option>
+                        <option value="U13-14">U13-14</option>
+                        <option value="U16-17"> U16-17</option>
+                        <option value="U18-19"> U18-19</option>
                     </select>
                 </div>
             </div>
@@ -155,7 +214,7 @@
         <div class="row text-center">
             <div class="col-lg-12">
                 <div class="form-group">
-                    <button type="button" class="btn btn-info">Complete Registration</button>
+                    <button id="btnComplete"type="button" class="btn btn-complete">Complete Registration</button>
                     <button id="btnClose" type="button" class="btn btn-warning">Close</button>
                 </div>
             </div>
@@ -182,6 +241,10 @@
             });
 
             $("#btnClose").click(function () {
+                $("#divRegisterNow").hide();
+            });
+
+            $("#btnComplete").click(function () {
                 $("#divRegisterNow").hide();
             });
 
