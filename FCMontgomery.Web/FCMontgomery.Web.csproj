@@ -127,6 +127,7 @@
     <Compile Include="Controllers\OutdoorSoccerController.cs" />
     <Compile Include="Controllers\SoccerPartiesController.cs" />
     <Compile Include="Controllers\SoccerToursController.cs" />
+    <Compile Include="Controllers\TesteController.cs" />
     <Compile Include="Controllers\U10Controller.cs" />
     <Compile Include="Controllers\U11_12Controller.cs" />
     <Compile Include="Controllers\U13_14Controller.cs" />
