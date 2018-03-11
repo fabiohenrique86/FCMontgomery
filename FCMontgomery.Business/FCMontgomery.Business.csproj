@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6D849838-DE5A-4DB6-A205-27986CE14E34}</ProjectGuid>
+    <ProjectGuid>{3DFA6BD2-5310-49C3-B10B-303D643A3D6D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FCMontgomery.Dto</RootNamespace>
-    <AssemblyName>FCMontgomery.Dto</AssemblyName>
+    <RootNamespace>FCMontgomery.Business</RootNamespace>
+    <AssemblyName>FCMontgomery.Business</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,9 +40,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="RegisterDto.cs" />
-    <Compile Include="ContactDto.cs" />
+    <Compile Include="RegisterBusiness.cs" />
+    <Compile Include="ContactBusiness.cs" />
+    <Compile Include="Exceptions\BusinessException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FCMontgomery.Dto\FCMontgomery.Dto.csproj">
+      <Project>{6d849838-de5a-4db6-a205-27986ce14e34}</Project>
+      <Name>FCMontgomery.Dto</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

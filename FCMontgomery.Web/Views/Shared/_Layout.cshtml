@@ -8,32 +8,25 @@
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     <style type="text/css">
-        body {
-            color: #0F2A56;
-        }
         .error, .input-validation-error {
             border-color: #ED5565;
         }
 
         .navbar-inverse {
-            background-color: #0f3456;
+            background-color: #D42E12;
             border: none;
         }
 
-        .navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-brand {
-            color: #fff;
-        }
-
-        .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
-            border-color: red;
-        }
+            .navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-brand {
+                color: #fff;
+            }
 
         .navbar-brand {
             padding: 0px 15px;
             height: auto;
         }
 
-        .carousel-control .fa-angle-left, .carousel-control .fa-angle-right, .carousel-control .icon-next, .carousel-control .icon-prev {
+        .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next, .carousel-control .icon-prev {
             font-size: 40px;
             margin-top: -35px;
         }
@@ -55,199 +48,183 @@
             height: 100%;
             line-height: 1;
             margin: 0 auto;
-            max-width: 100%;
-            padding: 1%;
-        }    </style>
+        }
+
+        .navbar-nav > li > a:hover, .nav .open > a, .nav .open > a:focus, .nav .open > a:hover {
+            background-color: #D42E12;
+        }
+
+        .carousel-control.left, .carousel-control.right {
+            background-color: #495678;
+        }
+
+        .container {
+            background-color: whitesmoke;
+        }
+
+        .register-now {
+            position: fixed;
+            right: 5pt;
+            z-index: 100;
+            bottom: 32pt;
+            color: whitesmoke;
+            border-radius: 10px;
+            padding: 10px;
+            display: none;
+            background-color: #495678;
+            border: 3px solid #D42E12;
+        }
+    </style>
 </head>
 <body id="page-top">
-    <!-- Navigation -->
-    @*<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="border-bottom: 3px solid #0F2A56">
-            <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="#"><span style="color: #0F2A56">FC</span> Montgomery</a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fa fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav text-uppercase ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#about">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#services">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#team">Team</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#store">store</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>*@
     <!-- Header -->
-    @*<header class="masthead">
-            <div class="container">
-                <div class="intro-text">
-                    <div class="intro-lead-in"></div>
-                    <div class="intro-heading text-uppercase">Welcome To Our Academy!</div>
-                </div>
+    <nav id="mainNav" class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="font-size: 14px">
+        <div class="container-full" style="padding-right: 30px">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand nav-link js-scroll-trigger" href="~/home#page-top">
+                    <img src="@Url.Content("~/img/logo.png")" style="width: 75px; padding: 5px; float: left" />
+                    <span style="float: left; font-size: 20px; padding-top: 25px; font-family: 'Kaushan Script','Helvetica Neue',Helvetica,Arial,cursive">FC Montgomery</span>
+                </a>
             </div>
-        </header>*@
-
-    <nav id="mainNav" class="navbar fixed-top navbar-expand-lg navbar-dark fixed-top" style="border-bottom: 3px solid #0F2A56; background-color: #72142E">
-        <div class="container">
-            <a class="navbar-brand js-scroll-trigger" style="color: #fff" href="~/home#page-top"><img src="~/img/logo.png" style="height: 60px;" /> FC Montgomery</a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="~/home#about">About us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="~/home#services">Our Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="~/home#team">Teams</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="~/home#store">Store</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="~/home#tryout">Try Outs</a>
-                    </li> 
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="~/home#contact">Contact</a>
-                    </li>           
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="padding-top: 15px;">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="~/home#about" class="nav-link js-scroll-trigger"><i class="fa fa-check" style="color: whitesmoke"></i> About us</a></li>
+                    <li><a href="~/home#services" class="nav-link js-scroll-trigger"><i class="fa fa-asterisk" style="color: whitesmoke"></i> Our Services</a></li>
+                    <li><a href="~/home#team" class="nav-link js-scroll-trigger"><i class="fa fa-futbol-o" style="color: whitesmoke"></i> Teams</a></li>
+                    <li><a href="~/home#store" class="nav-link js-scroll-trigger"><i class="fa fa-shopping-cart" style="color: whitesmoke"></i> Store</a></li>
+                    <li><a href="~/home#tryout" class="nav-link js-scroll-trigger"><i class="fa fa-sign-in" style="color: whitesmoke"></i> Try Outs</a></li>
+                    <li><a href="~/home#contact" class="nav-link js-scroll-trigger"><i class="fa fa-envelope" style="color: whitesmoke"></i> Contact Us</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    
     @RenderBody()
     <!-- Footer -->
-    <footer style="background-color: #0F2A56;">
-        <div class="container bg-light" style="border-top: 2px solid #ccc">
-            <div class="row text-left">
-                <div class="col-xs-12 col-lg-3">
-                    <h5><em><p>Sponsored by</p></em></h5>
+    <footer style="background-color: #495678; margin: 0">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-xs-6 col-md-6 col-lg-6">
+                    <h2 class="section-heading">Sponsored by</h2>
                 </div>
-                <div class="col-xs-12 col-lg-6">
-                    <h5><em><p>Partners</p></em></h5>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-3">
-                    <img src="~/img/under-armour.png" style="height:60px" class="img img-responsive" />
-                </div>
-                <div class="col-md-3">
-                    <img src="~/img/faulkner-img.png" style="height:60px" class="img img-responsive" />
-                </div>
-                <div class="col-md-3">
-                    <img src="~/img/Ems-logo.png" style="height:60px" class="img img-responsive" />
-                </div>
-                <div class="col-md-3">
-                    <img src="~/img/Eastwood-logo.jpg" style="height:60px" class="img img-responsive" />
+                <div class="col-xs-6 col-md-6 col-lg-6">
+                    <h2 class="section-heading">Partners</h2>
                 </div>
             </div>
             <div class="row">
+                <div class="col-xs-6 col-md-6 col-lg-6 text-center">
+                    <img src="~/img/under-armour.png" style="height:60px; display: inline" class="img img-responsive" />
+                </div>
+                <div class="col-xs-6 col-md-6 col-lg-6 text-center">
+                    <div class="row">
+                        <div class="col-xs-4 col-md-4 col-lg-4">
+                            <img src="~/img/faulkner-img.png" style="height:60px; display: inline" class="img img-responsive" />
+                        </div>
+                        <div class="col-xs-4 col-md-4 col-lg-4">
+                            <img src="~/img/Ems-logo.png" style="height:60px;  display: inline" class="img img-responsive" />
+                        </div>
+                        <div class="col-xs-4 col-md-4 col-lg-4">
+                            <a href="http://www.eastwoodschool.org/" target="_blank"><img src="~/img/Eastwood-logo.jpg" style="height:60px; display: inline" class="img img-responsive" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="padding-top: 25px; padding-bottom: 25px">
                 <div class="col-md-12 text-center">
                     <span class="copyright">Copyright &copy; @DateTime.Now.Year</span>
                 </div>
             </div>
         </div>
     </footer>
-    <div id="divRegisterNow" style="position: fixed; right: 5pt; z-index: 100; bottom: 35pt; : #0F2A56; color: whitesmoke; border-radius: 10px; padding: 10px; display: none; background-color: #0F2A56">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="form-group">
-                    Fill in the form below and be part of our team!
+    <!-- Register Now -->
+    <div id="divRegisterNow" class="register-now">
+        <form id="registerForm" name="registerForm" action="@Url.Action("Index", "Register")" method="post">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <img src="@Url.Content("~/img/logo.png")" style="width: 75px;" />
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="form-group">
-                    <input class="form-control" id="name" type="text" placeholder="Name">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <p style="padding-top: 15px; padding-bottom: 10px;">Fill in the form below and be part of our team!</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="form-group">
-                    <input class="form-control" id="email" type="text" placeholder="E-mail">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <input class="form-control" id="name" name="Name" type="text" placeholder="Name">
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="form-group">
-                    <select class="form-control" id="category">
-                        <option value="">Category</option>
-                        <option value="U6">U6</option>
-                        <option value="U8-9">U8-9</option>
-                        <option value="U10">U10</option>
-                        <option value="U11-12">U11-12</option>
-                        <option value="U13-14">U13-14</option>
-                        <option value="U16-17"> U16-17</option>
-                        <option value="U18-19"> U18-19</option>
-                    </select>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <input class="form-control" id="email" name="Email" type="text" placeholder="E-mail">
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="form-group">
-                    <input class="form-control" id="telephone" type="text" placeholder="Telephone">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <select class="form-control" id="Category" name="Category">
+                            <option value="">Category</option>
+                            <option value="U6">U6</option>
+                            <option value="U8-9">U8-9</option>
+                            <option value="U10">U10</option>
+                            <option value="U11-12">U11-12</option>
+                            <option value="U13-14">U13-14</option>
+                            <option value="U16-17">U16-17</option>
+                            <option value="U18-19">U18-19</option>
+                        </select>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="row text-center">
-            <div class="col-lg-12">
-                <div class="form-group">
-                    <button id="btnComplete"type="button" class="btn btn-complete">Complete Registration</button>
-                    <button id="btnClose" type="button" class="btn btn-warning">Close</button>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <input class="form-control" id="phone" name="Phone" type="text" placeholder="Telephone">
+                    </div>
                 </div>
             </div>
-        </div>
+            <div class="row text-center">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <button id="btnComplete" type="submit" class="btn btn-primary">Complete Registration</button>
+                    </div>
+                </div>
+            </div>
+        </form>
     </div>
     <div id="btnRegisterNow" style="position: fixed; right: 5pt; z-index: 100; bottom: 5pt">
-        <button type="button" class="btn btn-info">Register Now</button>
+        <button type="button" class="btn btn-info" style="background-color: #D42E12; border-color: #D42E12">Register Now</button>
     </div>
     @Scripts.Render("~/bundles/scripts")
     <script type="text/javascript">
 
         $(document).ready(function () {
-                
-            $("#btnRegisterNow").click(function ()
+
+            // carousel
+            $("#myCarousel").carousel(
             {
-                if ($("#divRegisterNow").is(':visible'))
-                {
+                interval: 5000 // segundos
+            });
+
+            $("#btnRegisterNow").click(function () {
+                if ($("#divRegisterNow").is(':visible')) {
                     $("#divRegisterNow").hide();
                 }
-                else
-                {
+                else {
                     $("#divRegisterNow").show();
-                }                
+                }
             });
-
-            $("#btnClose").click(function () {
-                $("#divRegisterNow").hide();
-            });
-
-            $("#btnComplete").click(function () {
-                $("#divRegisterNow").hide();
-            });
-
+            
         });
 
     </script>

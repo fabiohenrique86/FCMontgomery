@@ -40,7 +40,7 @@
             }
             else if (team == 4) {
                 name = "Diego da Silva";
-                occupation = "Multi age groups – Boys & Girls";
+                occupation = "Multi age groups - Boys & Girls";
                 about = "Coach Diego is entering his first season on the Faulkner University men’s soccer coaching staff as a student assistant goalkeeper coach. Prior to becoming a member of the Faulkner coaching staff, Da Silva was nominated for coach of the year as the ACA – Alabama Christian Academy men’s high school soccer program head coach. He led the Eagles to their best season ever qualifying to State for the first time on school history with a record of 22-1. Diego coaches our FCM U14 outdoor team and assists coach Bruno & Gabi with our U12 & U16 outdoor. You may see coach Diego on the Futsal courts too!<br />He is native of Bastos, São Paulo Brazil. At age 13 he played for his first club team in Brazil (Marília Atlético Clube). At 15 he won the State Championship in São Paulo. He has played for Olé Brasil, which is a club known for having players go out and play in other countries.<br />In 2010, he came to America and became High School National Champions with Montverde Academy, FL as an exchange student athlete. He moved to Montgomery in 2013 to attend Faulkner. He was the soccer team captain for two years and won several awards such as MVP of 2015, First Team All-Conference, and multiple Defensive Player of the Week Awards. Diego will be graduating from Faulkner in December, 2017. He pursues a degree in Business Administration.<br />Diego is married to Shelby Teeter da Silva whom he met in high school and now they have been married for three years.";
                 favoriteSoccerTeam = "Corinthians - Brazil";
                 food = "Yakisoba, “not from Brazil”";
@@ -73,8 +73,7 @@
             $("#modalTeam").modal('show');
         }
 
-        $(document).ready(function ()
-        {
+        $(document).ready(function () {
             $("#btnSendMessage").click(function () {
 
                 var contactDto = {};
@@ -83,15 +82,16 @@
                 contactDto.Email = $("#email").val();
                 contactDto.Phone = $("#phone").val();
                 contactDto.Message = $('#message').val();
-                
+
                 $.ajax({
                     dataType: "json",
                     type: "POST",
                     url: '@Url.Action("Send", "Contact")',
                     data: { contactDto: contactDto },
                     success: function (data) {
-                        
+
                         if (!data.Sucesso) {
+                            console.info(data.Erro);
                             alert(data.Mensagem);
                             return;
                         }
@@ -110,94 +110,48 @@
     </script>
 }
 
-<header id="myCarousel" class="carousel slide" style="border-top: 1px solid #0F2A56; border-bottom: 1px solid #0F2A56; background-color: #0F2A56">
+<header id="myCarousel" class="carousel slide" style="border-top: 1px solid #495678; border-bottom: 1px solid #495678; background-color: #495678; padding-top: 10px">
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
     </ol>
     <div class="carousel-inner">
         <div class="item active">
-            <img src="~/img/flyer.jpg">
-        </div>
-        <div class="item">
-            <img src="/img/flyer.jpg">
+            <img class="img img-responsive" style="width: 50%" src="https://scontent.fcgh11-1.fna.fbcdn.net/v/t1.0-9/29063007_1609771689105266_6452188424440645101_n.jpg?oh=04db84e714fb169e7c92ac0f44b8215e&oe=5AFF77CD">
         </div>
     </div>
     <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-        <span class="fa fa-angle-left"></span>
+        <span class="glyphicon glyphicon-chevron-left"></span>
     </a>
     <a class="right carousel-control" href="#myCarousel" data-slide="next">
-        <span class="fa fa-angle-right"></span>
+        <span class="glyphicon glyphicon-chevron-right"></span>
     </a>
 </header>
-
-
-@*<header>
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner" role="listbox">
-                <!-- Slide One - Set the background image for this slide in the line below -->
-                <div class="carousel-item active" style="background-image: url('../../img/flyer.JPG')">
-                    <div class="carousel-caption d-none d-md-block">
-                            <h3>Welcome to FCMontgomery</h3>
-
-                        </div>
-    </div>
-                <!-- Slide Two - Set the background image for this slide in the line below -->
-                <div class="carousel-item" style="background-image: url('../../img/time-completo.JPG')">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h3>Welcome to FCMontgomery</h3>
-                    </div>
-                </div>
-                <!-- Slide Three - Set the background image for this slide in the line below -->
-                <div class="carousel-item" style="background-image: url('../../img/renan-criancas.JPG')">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h3>Welcome to FCMontgomery</h3>
-                    </div>
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </header>*@
-
-
 <!-- About -->
 <section id="about">
-    <div class="container bg-light">
+    <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h2 class="section-heading text-uppercase">About us</h2>
                 <h3 class="section-subheading text-muted">A little bit about us and our journey</h3>
-                <p class="text-muted">We are an Outdoor Travel Soccer & Indoor Local Futsal program that focuses on technical skill development through the Brazilian Futsal and American Soccer methodology of training. Our goal is to take players of any age & level to their next personal level of performance. We do that in a positive & fun holistic environment through quality professional training and challenging teamwork competitions year round:</p>
+                <p>We are an Outdoor Travel Soccer & Indoor Local Futsal program that focuses on technical skill development through the Brazilian Futsal and American Soccer methodology of training. Our goal is to take players of any age & level to their next personal level of performance. We do that in a positive & fun holistic environment through quality professional training and challenging teamwork competitions year round:</p>
                 <ul style="list-style: none">
-                    <li>Club Seasons: <span class="text-muted">Spring & Fall Outdoor Soccer & Indoor Futsal</span></li>
-                    <li>Soccer Camps: <span class="text-muted">Spring Break, Summer, Thanksgiving & Christmas</span></li>
-                    <li>3v3 Tourneys: <span class="text-muted">Winter</span></li>
-                    <li>Lessons: <span class="text-muted">Private & Group</span></li>
-                    <li>Soccer Parties: <span class="text-muted">Birthday & Team</span></li>
-                    <li>Soccer Tours: <span class="text-muted">Brazil & more</span></li>
-                    <li>Home School: <span class="text-muted">All ages & levels</span></li>
+                    <li>Club Seasons: Spring & Fall Outdoor Soccer & Indoor Futsal</li>
+                    <li>Soccer Camps: Spring Break, Summer, Thanksgiving & Christmas</li>
+                    <li>3v3 Tourneys: Winter</li>
+                    <li>Lessons: Private & Group</li>
+                    <li>Soccer Parties: Birthday & Team</li>
+                    <li>Soccer Tours: Brazil & more</li>
+                    <li>Home School: All ages & levels</li>
                 </ul>
-                <p class="text-muted">Ask us about Military, Family discounts & Scholarship Application!</p>
+                <p>Ask us about Military, Family discounts & Scholarship Application!</p>
             </div>
         </div>
-        <div class="row">
+        <div class="row" style="padding-top: 30px">
             <div class="col-lg-12">
                 <ul class="timeline">
                     <li>
                         <div class="timeline-image">
-                            <img class="rounded-circle img-fluid" src="img/about/1.jpg" alt="">
+                            <img class="rounded-circle img-fluid" alt="">
                         </div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
@@ -211,7 +165,7 @@
                     </li>
                     <li class="timeline-inverted">
                         <div class="timeline-image">
-                            <img class="rounded-circle img-fluid" src="img/about/2.jpg" alt="">
+                            <img class="rounded-circle img-fluid" alt="">
                         </div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
@@ -225,7 +179,7 @@
                     </li>
                     <li>
                         <div class="timeline-image">
-                            <img class="rounded-circle img-fluid" src="img/about/3.jpg" alt="">
+                            <img class="rounded-circle img-fluid" alt="">
                         </div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
@@ -239,7 +193,7 @@
                     </li>
                     <li class="timeline-inverted">
                         <div class="timeline-image">
-                            <img class="rounded-circle img-fluid" src="img/about/4.jpg" alt="">
+                            <img class="rounded-circle img-fluid" alt="">
                         </div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
@@ -253,11 +207,7 @@
                     </li>
                     <li class="timeline-inverted">
                         <div class="timeline-image">
-                            <h4>
-                                Be Part
-                                <br>Of Our
-                                <br>Story!
-                            </h4>
+                            <h4>Be Part <br>Of Our <br>Story!</h4>
                         </div>
                     </li>
                 </ul>
@@ -267,20 +217,19 @@
 </section>
 <!-- Coaching Staff -->
 <section>
-    <div class="container bg-light">
+    <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-
                 <h2 class="section-heading text-uppercase">Coaching Staff</h2>
-                <h3 class="section-subheading">We are here to help you with all the support you need</h3>
+                <h3 class="section-subheading text-muted">We are here to help you with all the support you need</h3>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-12 col-md-4 col-lg-4">
                 <div class="team-member">
                     <img class="mx-auto rounded-circle" src="~/img/team/bruno2.jpg" alt="" onclick="modalTeam(1)" style="cursor: pointer">
                     <h4>Bruno Resende</h4>
-                    <p>Director of coaching – Soccer & Futsal</p>
+                    <p class="text-muted">Director of coaching – Soccer & Futsal</p>
                     <ul class="list-inline social-buttons">
                         <li class="list-inline-item">
                             <a href="#">
@@ -300,11 +249,11 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-12 col-md-4 col-lg-4">
                 <div class="team-member">
                     <img class="mx-auto rounded-circle" src="~/img/team/kyle-beard-195x300.jpg" alt="" onclick="modalTeam(2)" style="cursor: pointer">
                     <h4>Kyle Beard</h4>
-                    <p>Assistant director of coaching - Outdoor Soccer</p>
+                    <p class="text-muted">Assistant director of coaching - Outdoor Soccer</p>
                     <ul class="list-inline social-buttons">
                         <li class="list-inline-item">
                             <a href="#">
@@ -324,11 +273,11 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-12 col-md-4 col-lg-4">
                 <div class="team-member">
                     <img class="mx-auto rounded-circle" src="~/img/team/gabi-queiroz-201x300.jpg" alt="" onclick="modalTeam(3)" style="cursor: pointer">
                     <h4>Gabi Queiroz</h4>
-                    <p>Assistant director of coaching - Indoor Futsal</p>
+                    <p class="text-muted">Assistant director of coaching - Indoor Futsal</p>
                     <ul class="list-inline social-buttons">
                         <li class="list-inline-item">
                             <a href="#">
@@ -350,11 +299,11 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-12 col-md-4 col-lg-4">
                 <div class="team-member">
                     <img class="mx-auto rounded-circle" src="~/img/team/diego-da-silva-184x300.jpg" alt="" onclick="modalTeam(4)" style="cursor: pointer">
                     <h4>Diego da Silva</h4>
-                    <p>Multi age groups – Boys & Girls</p>
+                    <p class="text-muted">Multi age groups – Boys & Girls</p>
                     <ul class="list-inline social-buttons">
                         <li class="list-inline-item">
                             <a href="#">
@@ -374,11 +323,11 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-12 col-md-4 col-lg-4">
                 <div class="team-member">
                     <img class="mx-auto rounded-circle" src="~/img/team/travis-jordan-185x300.jpg" alt="" onclick="modalTeam(5)" style="cursor: pointer">
                     <h4>Travis Jordan</h4>
-                    <p>Assistant of coaching - U8, U9 & U10 Outdoor Soccer</p>
+                    <p class="text-muted">Assistant of coaching - U8, U9 & U10 Outdoor Soccer</p>
                     <ul class="list-inline social-buttons">
                         <li class="list-inline-item">
                             <a href="https://www.facebook.com/brooke.deboer" target="_blank">
@@ -398,13 +347,12 @@
                     </ul>
                 </div>
             </div>
-
         </div>
     </div>
 </section>
 <!-- Services -->
 <section id="services">
-    <div class="container bg-light">
+    <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h2 class="section-heading text-uppercase">Our Services</h2>
@@ -412,147 +360,138 @@
             </div>
         </div>
         <div class="row text-center">
-            <div class="col-md-4">
-                <a href="@Url.Action("Index", "IndoorSoccer")"><img src="~/img/foto-indoor2.jpg" style="height: 150px" /></a>
+            <div class="col-md-4 col-lg-4">
+                <a href="@Url.Action("Index", "IndoorSoccer")"><img src="~/img/foto-indoor2.jpg" class="img img-responsive" style="height: 200px" /></a>
                 <h4 class="service-heading">Indoor Soccer (Futsal)</h4>
                 <p class="text-muted">Futsal is a super technical methodology in a fast-paced atmosphere considered the most popular game among people in Brazil</p>
             </div>
-            <div class="col-md-4">
-                <a href="@Url.Action("Index", "OutdoorSoccer")"><img src="~/img/foto-outdoor-time.jpg" style="height: 150px" /></a>
+            <div class="col-md-4 col-lg-4">
+                <a href="@Url.Action("Index", "OutdoorSoccer")"><img src="~/img/foto-outdoor-time.jpg" class="img img-responsive" style="height: 200px" /></a>
                 <h4 class="service-heading">Outdoor Soccer</h4>
                 <p class="text-muted">The traditional soccer which is played on the grass and became famous in United States after being the host country of the world cup in 1994 </p>
             </div>
-            <div class="col-md-4">
-                <img src="~/img/adult-team-logo.png" style="height: 150px" />
+            <div class="col-md-4 col-lg-4">
+                <a href="#"><img src="~/img/adult-team-logo.png" class="img img-responsive" style="height: 200px; display: inline" /></a>
                 <h4 class="service-heading">Adult Team</h4>
                 <p class="text-muted">Click for more info</p>
             </div>
-
-            <div class="row text-center">
-                <div class="col-md-4">
-                    <a href="@Url.Action("Index", "SoccerTours")"><img src="~/img/rio.jpg" style="height: 150px" /></a>
-                    <h4 class="service-heading">Soccer Tours</h4>
-                    <p class="text-muted">One of the best ways to learn more about soccer is to experience soccer, and we can help you do that!</p>
-                </div>
-                <div class="col-md-4">
-                    <a href="@Url.Action("Index", "SoccerParties")"><img src="~/img/bolo.jpg" style="height: 150px" /></a>
-                    <h4 class="service-heading">Soccer Parties</h4>
-                    <p class="text-muted">We offer a broad spectrum of party opportunities and are very flexible because we are here to serve you and make your event special.</p>
-                </div>
-                <div class="col-md-4">
-                    <a href="@Url.Action("Index", "OpenPlay")"><img src="~/img/drible.jpg" style="height: 150px" /></a>
-                        <h4 class="service-heading">Tournaments and Open-Play</h4>
-                        <p class="text-muted">Soccer Futsal Open Play for multiple Age Groups, including Adults is available for any group of players who want to get together and have some fun playing Futsal</p>
-</div>
+        </div>
+        <div class="row text-center">
+            <div class="col-md-4 col-lg-4">
+                <a href="@Url.Action("Index", "SoccerTours")"><img src="~/img/rio.jpg" class="img img-responsive" style="height: 200px" /></a>
+                <h4 class="service-heading">Soccer Tours</h4>
+                <p class="text-muted">One of the best ways to learn more about soccer is to experience soccer, and we can help you do that!</p>
+            </div>
+            <div class="col-md-4 col-lg-4">
+                <a href="@Url.Action("Index", "SoccerParties")"><img src="~/img/bolo.jpg" class="img img-responsive" style="height: 200px" /></a>
+                <h4 class="service-heading">Soccer Parties</h4>
+                <p class="text-muted">We offer a broad spectrum of party opportunities and are very flexible because we are here to serve you and make your event special.</p>
+            </div>
+            <div class="col-md-4 col-lg-4">
+                <a href="@Url.Action("Index", "OpenPlay")"><img src="~/img/drible.jpg" class="img img-responsive" style="height: 200px; display: inline" /></a>
+                <h4 class="service-heading">Tournaments and Open-Play</h4>
+                <p class="text-muted">Soccer Futsal Open Play for multiple Age Groups, including Adults is available for any group of players who want to get together and have some fun playing Futsal</p>
             </div>
         </div>
     </div>
 </section>
-
 <!-- Teams -->
 <section id="team">
-    <div class="container bg-light">
+    <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h2 class="section-heading text-uppercase">Teams</h2>
-                <h3 class="section-subheading text-muted">Choose a team and read more about our programs,schedules and prices</h3>
+                <h3 class="section-subheading text-muted">Choose a team and read more about our programs, schedules and prices</h3>
             </div>
         </div>
-        <div class="row  text-center">
-            <div class="col-md-4 col-sm-6 portfolio-item">
+        <div class="row text-center">
+            <div class="col-sm-12 col-md-3 col-lg-3 portfolio-item">
                 <a href="@Url.Action("Index", "U6")">
-
                     <div class="portfolio-hover">
                         <div class="portfolio-hover-content">
                             <i class="fa fa-futbol-o fa-3x"></i>
                         </div>
                     </div>
-                    <img class="img-fluid" src="img/portfolio/01-thumbnail.jpg" alt="">
                 </a>
                 <div class="portfolio-caption">
                     <h4>U6</h4>
                     <p class="text-muted">Ages under 6 years old </p>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-6 portfolio-item">
+            <div class="col-sm-12 col-md-3 col-lg-3 portfolio-item">
                 <a href="@Url.Action("Index", "U8_9")">
                     <div class="portfolio-hover">
                         <div class="portfolio-hover-content">
                             <i class="fa fa-futbol-o fa-3x"></i>
                         </div>
                     </div>
-                    <img class="img-fluid" src="img/portfolio/02-thumbnail.jpg" alt="">
                 </a>
                 <div class="portfolio-caption">
                     <h4>U8-9</h4>
                     <p class="text-muted">Ages between 8 and 9 years old</p>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-6 portfolio-item">
+            <div class="col-sm-12 col-md-3 col-lg-3 portfolio-item">
                 <a href="@Url.Action("Index", "U10")">
                     <div class="portfolio-hover">
                         <div class="portfolio-hover-content">
                             <i class="fa fa-futbol-o fa-3x"></i>
                         </div>
                     </div>
-                    <img class="img-fluid" src="img/portfolio/03-thumbnail.jpg" alt="">
                 </a>
                 <div class="portfolio-caption">
                     <h4>U10</h4>
                     <p class="text-muted">Ages between 9 and 10 years old</p>
                 </div>
             </div>
-
-            <div class="col-md-4 col-sm-6 portfolio-item">
+            <div class="col-sm-12 col-md-3 col-lg-3 portfolio-item">
                 <a href="@Url.Action("Index", "U11_12")">
                     <div class="portfolio-hover">
                         <div class="portfolio-hover-content">
                             <i class="fa fa-futbol-o fa-3x"></i>
                         </div>
                     </div>
-                    <img class="img-fluid" src="img/portfolio/04-thumbnail.jpg" alt="">
                 </a>
                 <div class="portfolio-caption">
                     <h4>U11-12</h4>
                     <p class="text-muted">Ages between 11 and 12 years old</p>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-6 portfolio-item">
+        </div>
+        <div class="row text-center">
+            <div class="col-sm-12 col-md-3 col-lg-3 portfolio-item">
                 <a href="@Url.Action("Index","U13_14")">
                     <div class="portfolio-hover">
                         <div class="portfolio-hover-content">
                             <i class="fa fa-futbol-o fa-3x"></i>
                         </div>
                     </div>
-                    <img class="img-fluid" src="img/portfolio/05-thumbnail.jpg" alt="">
                 </a>
                 <div class="portfolio-caption">
                     <h4>U13-14</h4>
                     <p class="text-muted">Ages between 13 and 14 years old</p>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-6 portfolio-item">
+            <div class="col-sm-12 col-md-3 col-lg-3 portfolio-item">
                 <a href="@Url.Action("Index", "U16_17")">
                     <div class="portfolio-hover">
                         <div class="portfolio-hover-content">
                             <i class="fa fa-futbol-o fa-3x"></i>
                         </div>
                     </div>
-                    <img class="img-fluid" src="img/portfolio/06-thumbnail.jpg" alt="">
                 </a>
                 <div class="portfolio-caption">
                     <h4>U16-17</h4>
                     <p class="text-muted">Ages between 16 and 17 years old</p>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-6 portfolio-item">
+            <div class="col-sm-12 col-md-3 col-lg-3 portfolio-item">
                 <a href="@Url.Action("Index", "U18_19")">
                     <div class="portfolio-hover">
                         <div class="portfolio-hover-content">
                             <i class="fa fa-futbol-o fa-3x"></i>
                         </div>
                     </div>
-                    <img class="img-fluid" src="img/portfolio/06-thumbnail.jpg" alt="">
                 </a>
                 <div class="portfolio-caption">
                     <h4>U18-19</h4>
@@ -564,7 +503,7 @@
 </section>
 <!-- Store -->
 <section id="store">
-    <div class="container bg-light">
+    <div class="container">
         <div class="row text-center">
             <div class="col-lg-12">
                 <h2 class="section-heading text-uppercase">Store</h2>
@@ -573,25 +512,22 @@
         </div>
         <div class="row text-center">
             <div class="col-lg-12">
-                <a href="https://www.bsnteamsports.com/v3/shop/team_shop/Vwyv44TqjY#/" target="_blank"><i class="fa fa-shopping-cart fa-4x"></i></a>
-
-                <h4 class="service-heading text-muted">Gears and Acessories</h4>
-
+                <a href="https://www.bsnteamsports.com/v3/shop/team_shop/Vwyv44TqjY#/" target="_blank"><i class="fa fa-shopping-cart fa-5x"></i></a>
+                <h4 class="service-heading">Gears and Acessories</h4>
             </div>
-
-
         </div>
     </div>
 </section>
 <!-- Try Outs -->
 <section id="tryout">
-    <div class="container bg-light" style="padding-top: 60px">
+    <div class="container" style="padding-top: 40px">
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h2 class="section-heading text-uppercase">Try Outs</h2>
+                <h3 class="section-subheading text-muted">Do you want to join us? Why don't you try out? It's free!</h3>
             </div>
             <div class="row">
-                <div class="col-lg-12 text-center text-muted">
+                <div class="col-lg-12 text-center">
                     <p>February 5-9th (Outdoor & Indoor). Sign up now free of cost!</p>
                     <div class="text-center">
                         <p align="center">
@@ -608,47 +544,43 @@
 </section>
 <!-- Contact -->
 <section id="contact">
-    <div class="container bg-light">
+    <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="section-heading text-uppercase" style="color: #0F2A56">Contact Us</h2>
-                <h3 class="section-subheading text-muted">Do you have any questions? Send us and we will get back to you soon</h3>
+                <h2 class="section-heading text-uppercase">Contact Us</h2>
+                <h3 class="section-subheading text-muted">Do you have any questions? Send us your message and we will get back to you soon!</h3>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <form id="contactForm" name="sentMessage" novalidate>
+                <form id="contactForm" name="contactForm">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input class="form-control" id="name" type="text" placeholder="Your Name *" style="border-color: #0F2A56">
-                                <p class="help-block text-danger"></p>
+                                <input class="form-control" id="name" type="text" placeholder="Your Name" style="border-color: #495678">
                             </div>
                             <div class="form-group">
-                                <input class="form-control" id="email" type="email" placeholder="Your Email *" style="border-color: #0F2A56">
-                                <p class="help-block text-danger"></p>
+                                <input class="form-control" id="email" type="email" placeholder="Your Email" style="border-color: #495678">
                             </div>
                             <div class="form-group">
-                                <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" style="border-color: #0F2A56">
-                                <p class="help-block text-danger"></p>
+                                <input class="form-control" id="phone" type="tel" placeholder="Your Phone" style="border-color: #495678">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <textarea class="form-control" id="message" placeholder="Your Message *" style="border-color: #0F2A56"></textarea>
-                                <p class="help-block text-danger"></p>
+                                <textarea class="form-control" id="message" placeholder="Your Message" style="border-color: #495678"></textarea>
                             </div>
                         </div>
                         <div class="clearfix"></div>
                         <div class="col-lg-12 text-center">
                             <div id="success"></div>
-                            <button id="btnSendMessage" class="btn btn-primary btn-xl text-uppercase" type="button">Send Message</button>
+                            <button id="btnSendMessage" class="btn btn-primary btn-xl" type="button">Send Message</button>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
-        <div class="row">
+        <div class="row" style="padding-top: 40px">
             <div class="col-lg-12 text-center">
                 <ul class="list-inline social-buttons">
                     <li class="list-inline-item">
@@ -657,7 +589,7 @@
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="#">
+                        <a href="https://www.facebook.com/FC-Montgomery-163995150349601/" target="_blank">
                             <i class="fa fa-facebook"></i>
                         </a>
                     </li>
@@ -671,5 +603,4 @@
         </div>
     </div>
 </section>
-
 @Html.Partial("_ModalTeam")

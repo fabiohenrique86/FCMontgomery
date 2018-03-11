@@ -1,0 +1,171 @@
+﻿@model FCMontgomery.Dto.RegisterDto
+
+@{
+    ViewBag.Title = "Register";
+}
+
+@section scripts
+{
+    <script type="text/javascript">
+
+        $(document).ready(function ()
+        {
+            $("#btnRegister").click(function () {
+                
+                $.ajax({
+                    dataType: "json",
+                    type: "POST",
+                    url: '@Url.Action("Send", "Register")',
+                    data: $("#registerFullForm").serialize(),
+                    success: function (data) {
+
+                        if (!data.Sucesso) {
+                            console.info(data.Erro);
+                            alert(data.Mensagem);
+                            return;
+                        }
+
+                        // limpa o formulário
+                        $("#registerFullForm")[0].reset();
+
+                        alert(data.Mensagem);
+                    }
+                });
+
+            });
+        });
+    </script>
+
+}
+<section id="register" style="padding-top: 22px">
+    <form id="registerFullForm" name="registerFullForm" action="#">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-heading text-uppercase">Register</h2>
+                    <h3 class="section-subheading text-muted">Do you want to be part of our team? Fill in the form and send it to us!</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Your Name" value="@Model.Name" name="Name" style="border-color: #495678">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <input class="form-control" type="email" placeholder="Your Email" value="@Model.Email" name="Email" style="border-color: #495678">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Your Category" value="@Model.Category" name="Category" style="border-color: #495678">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <input class="form-control" type="tel" placeholder="Your Phone" value="@Model.Phone" name="Phone" style="border-color: #495678">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Your Address" name="Address" style="border-color: #495678">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <input class="form-control" id="city" type="text" placeholder="Your City" name="City" style="border-color: #495678">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <input class="form-control" id="birthDay" type="text" placeholder="Your BirthDay" name="BirthDay" style="border-color: #495678">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <select class="form-control" id="Gender" name="Gender">
+                            <option value="">Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <input class="form-control" id="ParentName" type="text" placeholder="Your Parent's Name" name="ParentName" style="border-color: #495678">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <input class="form-control" id="ParentPhone" type="text" placeholder="Your Parent's Phone" name="ParentPhone" style="border-color: #495678">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <input class="form-control" id="ParentEmail" type="text" placeholder="Your Parent's E-mail" name="ParentEmail" style="border-color: #495678">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <select class="form-control" id="Position" name="Position">
+                            <option value="">Position</option>
+                            <option value="Goalkeeper">Goalkeeper</option>
+                            <option value="Defender">Defender</option>
+                            <option value="Center-back/Center-Half/Central-Defender">Center-back/Center-Half/Central-Defender</option>
+                            <option value="Full-Back">Full-Back</option>
+                            <option value="Wing-Back">Wing-Back</option>
+                            <option value="MidFielder">MidFielder</option>
+                            <option value="MiddleFielder">MiddleFielder</option>
+                            <option value="Center-Forward/Striker">Center-Forward/Striker</option>
+                            <option value="Forward">Forward</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <input class="form-control" id="ClubExperience" type="text" placeholder="Your Club Experience" name="ClubExperience" style="border-color: #495678">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <input class="form-control" id="YearExperience" type="text" placeholder="Your Year of Experience" name="YearExperience" style="border-color: #495678">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div id="success"></div>
+                    <button id="btnRegister" class="btn btn-primary btn-xl text-uppercase" type="button">Finish Registration</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>
+

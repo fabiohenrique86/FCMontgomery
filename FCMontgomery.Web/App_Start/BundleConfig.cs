@@ -13,16 +13,17 @@ namespace FCMontgomery.Web
                       "~/Content/font.kaushan.script.css",
                       "~/Content/font.droid-serif.css",
                       "~/Content/font.roboto.slab.css",
-                      "~/Content/agency.min.css",
-                      "~/Content/modern-business.css"));
+                      "~/Content/modern-business.css",
+                      "~/Content/agency.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/scripts")
                 .Include("~/Scripts/jquery.min.js",
                 "~/Scripts/bootstrap.min.js",
                 "~/Scripts/jquery.easing.min.js",
-                "~/Scripts/jquery.bootstrap.validation.js",
-                "~/Scripts/contactme.js",
-                "~/Scripts/agency.min.js"));
+                //"~/Scripts/jquery.bootstrap.validation.js",
+                // "~/Scripts/contactme.js",
+                "~/Scripts/agency.min.js"
+            ));
         }
     }
 }

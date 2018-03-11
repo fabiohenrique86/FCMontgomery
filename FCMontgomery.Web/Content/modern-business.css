@@ -1,35 +1,10 @@
 ﻿/*!
- * Start Bootstrap - Modern Business (https://startbootstrap.com/template-overviews/modern-business)
- * Copyright 2013-2017 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-logomodern-business-nav/blob/master/LICENSE)
+ * Start Bootstrap - Modern Business HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-/*
-body {
-  padding-top: 54px;
-}
-
-@media (min-width: 992px) {
-  body {
-    padding-top: 56px;
-  }
-}
-
-.carousel-item {
-  height: 70vh;
-  background: no-repeat center center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  opacity:initial;
-  
-}
-
-.portfolio-item {
-  margin-bottom: 30px;
-}
-*/
+/* Global Styles */
 
 html,
 body {
@@ -51,7 +26,7 @@ body {
 /* Home Page Carousel */
 
 header.carousel {
-    height: 100%;
+    height: 80%;
 }
 
 header.carousel .item,
@@ -90,6 +65,12 @@ header.carousel .fill {
 .period {
     display: block;
     font-style: italic;
+}
+
+/* Footer Styles */
+
+footer {
+    margin: 50px 0;
 }
 
 /* Responsive Styles */
