@@ -113,12 +113,17 @@
 <header id="myCarousel" class="carousel slide" style="border-top: 1px solid #495678; border-bottom: 1px solid #495678; background-color: #495678; padding-top: 10px">
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
     </ol>
     <div class="carousel-inner">
         <div class="item active">
             <img class="img img-responsive" style="width: 50%" src="https://scontent.fcgh11-1.fna.fbcdn.net/v/t1.0-9/29063007_1609771689105266_6452188424440645101_n.jpg?oh=04db84e714fb169e7c92ac0f44b8215e&oe=5AFF77CD">
         </div>
+        <div class="item">
+            <img class="img img-responsive" style="width: 87%" src="~/img/flyer.jpg" />
+        </div>
     </div>
+
     <a class="left carousel-control" href="#myCarousel" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left"></span>
     </a>
@@ -388,9 +393,24 @@
                 <p class="text-muted">We offer a broad spectrum of party opportunities and are very flexible because we are here to serve you and make your event special.</p>
             </div>
             <div class="col-md-4 col-lg-4">
-                <a href="@Url.Action("Index", "OpenPlay")"><img src="~/img/drible.jpg" class="img img-responsive" style="height: 200px; display: inline" /></a>
+                <a href="@Url.Action("Index", "OpenPlay")"><img src="~/img/bruno-time.jpg" class="img img-responsive" style="height: 200px; display: inline" /></a>
                 <h4 class="service-heading">Tournaments and Open-Play</h4>
                 <p class="text-muted">Soccer Futsal Open Play for multiple Age Groups, including Adults is available for any group of players who want to get together and have some fun playing Futsal</p>
+            </div>
+            <div class="col-md-4 col-lg-4">
+                <a href="@Url.Action("Index", "")"><img src="~/img/drible.jpg" class="img img-responsive" style="height: 200px; display: inline" /></a>
+                <h4 class="service-heading">Private 1 on 1 Lessons</h4>
+                <p class="text-muted">Please complete the Private Lesson Request form and schedule your lesson. Click to check more infos about prices</p>
+            </div>
+            <div class="col-md-4 col-lg-4">
+                <a href="@Url.Action("Index", "")"><img src="~/img/renan-criancas.jpg" class="img img-responsive" style="height: 200px; display: inline" /></a>
+                <h4 class="service-heading">Group Lessons and Soccer Camps</h4>
+                <p class="text-muted">Please complete Group Lesson Request form and schedule your lesson. Click to check more infos about prices</p>
+            </div>
+            <div class="col-md-4 col-lg-4">
+                <a href="@Url.Action("Index", "")"><img src="~/img/time.JPG" class="img img-responsive" style="height: 200px; display: inline" /></a>
+                <h4 class="service-heading">3v3/Game/Clinic</h4>
+                <p class="text-muted">Please complete Group Lesson Request form and schedule your lesson. Click to check more infos about prices</p>
             </div>
         </div>
     </div>
